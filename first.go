@@ -3,12 +3,10 @@ package main
 import "fmt"
 
 func main () {
-	x := 10
-	changeValue(&x)
-	fmt.Println(x)
-	fmt.Println(&x)
-}
-
-func changeValue(x *int) {
-	*x = 7;
+	var name string = "Arrya Paul"
+	const pi float64 = 3.14159
+	fmt.Println(len(name))
+	fmt.Println(name + "is a chill dude")
+	fmt.Printf("%.3f \n",pi)
+	fmt.Printf("%T \n", name);
 }
