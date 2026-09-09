@@ -3,14 +3,10 @@ package main
 import "fmt"
 
 func main () {
-	var a int = 5
-	var b float32 = 4.32
-	const pi float64 = 3.141545146
-	x,y := 14,15
-
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(pi)
-	fmt.Println(x)
-	fmt.Println(y)
+	x, y := 5,6
+	fmt.Println("x + y = ", x+y)
+	fmt.Println("x - y = ", x-y)
+	fmt.Println("x * y = ", x*y)
+	fmt.Println("x / y = ", x/y)
+	fmt.Println("x mod y = ", x%y)
 }
