@@ -3,7 +3,10 @@ package main
 import "fmt"
 
 func main () {
-	for i := 1; i <= 10; i++ {
-		fmt.Println(i)
+	age := 18
+	if age > 18 {
+		fmt.Println("Yes, you can vote!")
+	} else {
+		fmt.Println("No, you can't vote!")
 	}
 }
