@@ -5,5 +5,7 @@ import "fmt"
 func main () {
 	EvenNum := [5]int{0,2,4,6,8}
 
-	fmt.Println(EvenNum[2])
+	for _, value := range EvenNum {
+		fmt.Println(value)
+	}
 }
