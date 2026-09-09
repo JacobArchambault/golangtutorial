@@ -3,10 +3,12 @@ package main
 import "fmt"
 
 func main () {
-	age := 18
-	if age > 18 {
-		fmt.Println("Yes, you can vote!")
-	} else {
-		fmt.Println("No, you can't vote!")
-	}
+	var EvenNum[5] int
+
+	EvenNum[0] = 0
+	EvenNum[1] = 1
+	EvenNum[2] = 2
+	EvenNum[3] = 3
+	EvenNum[4] = 4
+	fmt.Println(EvenNum[2])
 }
