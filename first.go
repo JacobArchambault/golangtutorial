@@ -1,41 +1,19 @@
 package main
 
 import (
-	"fmt"
-	"math"
+	"log"
+	"os"
 )
 
 func main () {
-	rect := Rectangle{50,60}
-	circ := Circle{7}
+	file, err := os.Create("sample.txt")
 
-	fmt.Println("Area of rectangle is", getArea(rect))
-	fmt.Println("Area of circle is", getArea(circ))
-}
+	if err != nil {
+		log.Fatal(err)
+	}
 
-type Shape interface {
-	area() float64
-}
-
-type Rectangle struct {
-	height float64
-	width float64
-}
-
-type Circle struct {
-	radius float64
-}
-
-func (r1 Rectangle) area() float64 {
-	return r1.height * r1.width
-}
-
-func (c1 Circle) area() float64 {
-	return math.Pi * math.Pow(c1.radius,2)
-}
-
-func getArea(shape Shape) float64 {
-	return shape.area()
+	file.WriteString("Hi, my name is Jacob and this file was created using GO!")
+	file.Close()
 }
 
 
