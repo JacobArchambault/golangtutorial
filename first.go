@@ -3,23 +3,14 @@ package main
 import "fmt"
 
 func main () {
-	EvenNum := [5]int{0,2,4,6,8}
+	StudentAge := make(map[string] int)
 
-	for _, value := range EvenNum {
-		fmt.Println(value)
-	}
-	
-	numSlice := []int{5,4,3,2,1}
+	StudentAge["Arrya"] = 23
+	StudentAge["Saurabh"] = 27
+	StudentAge["Prerna"] = 27
+	StudentAge["Akrati"] = 19
+	StudentAge["Sahiti"] = 42
+	StudentAge["Kirti"] = 22
 
-	sliced := numSlice[0:]
-	fmt.Println(sliced)
-	
-	slice2 := make([]int, 5, 10)
-
-	copy(slice2, numSlice)
-
-	fmt.Println(slice2)
-	
-	slice3 := append(numSlice, 3, 0, -1)
-	fmt.Println(slice3)
+	fmt.Println(StudentAge)
 }
