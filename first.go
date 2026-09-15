@@ -3,14 +3,9 @@ package main
 import "fmt"
 
 func main () {
-	num := 5
-	fmt.Println(factorial(num))
+	defer FirstRun()
+	SecondRun()
 }
 
-func factorial (num int) int {
-	if num == 0 {
-		return 1
-	}
-
-	return num * factorial(num-1)
-}
+func FirstRun() { fmt.Println("I executed First")}
+func SecondRun() { fmt.Println("I executed Second")}
