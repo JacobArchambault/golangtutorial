@@ -3,14 +3,19 @@ package main
 import "fmt"
 
 func main () {
-	StudentAge := make(map[string] int)
+	superhero := map[string]map[string]string{
+		"Superman" : map[string]string{
+			"RealName" : "Clark Kent",
+			"City" : "Metropolis",
+		}, 
 
-	StudentAge["Arrya"] = 23
-	StudentAge["Saurabh"] = 27
-	StudentAge["Prerna"] = 27
-	StudentAge["Akrati"] = 19
-	StudentAge["Sahiti"] = 42
-	StudentAge["Kirti"] = 22
+		"Batman" : map[string] string{
+			"RealName" : "Bruce Wayne",
+			"City" : "Gotham City",
+		}, 
+	}
 
-	fmt.Println(StudentAge)
+	if temp, hero := superhero["Superman"]; hero {
+		fmt.Println(temp["RealName"], temp["City"])
+	}
 }
