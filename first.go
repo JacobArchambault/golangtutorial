@@ -19,4 +19,7 @@ func main () {
 	copy(slice2, numSlice)
 
 	fmt.Println(slice2)
+	
+	slice3 := append(numSlice, 3, 0, -1)
+	fmt.Println(slice3)
 }
