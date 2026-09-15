@@ -3,19 +3,10 @@ package main
 import "fmt"
 
 func main () {
-	superhero := map[string]map[string]string{
-		"Superman" : map[string]string{
-			"RealName" : "Clark Kent",
-			"City" : "Metropolis",
-		}, 
+	x, y := 5, 6
+	fmt.Println(add(x, y))
+}
 
-		"Batman" : map[string] string{
-			"RealName" : "Bruce Wayne",
-			"City" : "Gotham City",
-		}, 
-	}
-
-	if temp, hero := superhero["Superman"]; hero {
-		fmt.Println(temp["RealName"], temp["City"])
-	}
+func add (num1, num2 int) int {
+	return num1+num2
 }
