@@ -1,27 +1,21 @@
 package main
 
 import (
-	"log"
-	"os"
-	"io/ioutil"
 	"fmt"
+	"net/http"
 )
 
-func main () {
-	file, err := os.Create("sample.txt")
+func main() {
 
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	file.WriteString("Hi, my name is Jacob and this file was created using GO!")
-	file.Close()
-	
-	stream, err := ioutil.ReadFile("sample.txt")
-
-	s1 := string(stream)
-
-	fmt.Println(s1)
+	http.HandleFunc("/",handler)
+	http.HandleFunc("/Hello", handler2)
+	http.ListenAndServe(":8080", nil)
 }
 
+func handler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Welcome to my home page")
+}
 
+func handler2 (w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Hello world")
+}
